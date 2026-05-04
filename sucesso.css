@@ -1,0 +1,115 @@
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Roboto', sans-serif;
+
+}
+
+body{
+
+height:100vh;
+
+background-image:url("./img.png/fundo-site.jpeg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+/* CAIXA DA MENSAGEM */
+
+.mensagem{
+
+background:white;
+
+width:600px;
+
+padding:60px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.3);
+
+animation:entrada 0.5s ease;
+
+}
+
+/* TITULO */
+
+.mensagem h1{
+
+color:#0f5c3a;
+
+font-size:36px;
+
+margin-bottom:25px;
+
+}
+
+/* TEXTOS */
+
+.mensagem p{
+
+font-size:20px;
+
+margin:10px 0;
+
+}
+
+/* BOTÃO */
+
+.btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+background:#0f5c3a;
+
+color:white;
+
+padding:14px 40px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+font-size:18px;
+
+transition:0.3s;
+
+}
+
+.btn:hover{
+
+background:#0b4229;
+
+}
+
+/* ANIMAÇÃO */
+
+@keyframes entrada{
+
+from{
+
+transform:scale(0.8);
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}
