@@ -1,0 +1,206 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Roboto', sans-serif;
+}
+
+/* FUNDO DA PÁGINA */
+
+body{
+
+height:100vh;
+
+background-image:url("./img.png/fundo-site.jpeg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+
+}
+
+/* HEADER */
+
+header{
+
+width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 60px;
+
+background:rgba(255,255,255,0.9);
+
+}
+
+header h1{
+
+color:#0f5c3a;
+font-size:28px;
+
+}
+
+/* BOTÃO VOLTAR */
+
+.btn-voltar{
+
+background:#0f5c3a;
+color:white;
+
+padding:10px 20px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+.btn-voltar:hover{
+
+background:#0b4229;
+
+}
+
+/* CONTAINER DOS PLANOS */
+
+.container{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:50px;
+
+flex:1;
+
+flex-wrap:wrap;
+
+}
+
+/* CARD DO PLANO */
+
+.plano{
+
+background:white;
+
+width:330px;
+
+padding:35px;
+
+border-radius:12px;
+
+border:2px solid #0f5c3a;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+text-align:center;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+transition:0.3s;
+
+}
+
+/* EFEITO AO PASSAR MOUSE */
+
+.plano:hover{
+
+transform:translateY(-10px);
+
+}
+
+/* ICONE */
+
+.plano img{
+
+width:70px;
+
+margin:10px auto;
+
+}
+
+/* TITULO DO PLANO */
+
+.plano h2{
+
+color:#0f5c3a;
+
+font-size:26px;
+
+margin-bottom:10px;
+
+}
+
+/* PREÇO */
+
+.preco{
+
+font-size:28px;
+
+font-weight:600;
+
+color:#0f5c3a;
+
+margin:15px 0;
+
+}
+
+/* LISTA */
+
+ul{
+
+list-style:none;
+
+text-align:left;
+
+margin:20px 0;
+
+}
+
+ul li{
+
+padding:6px 0;
+
+font-size:16px;
+
+}
+
+/* BOTÃO ESCOLHER */
+
+.btn{
+
+background:#0f5c3a;
+
+color:white;
+
+border:none;
+
+padding:12px;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-size:16px;
+
+transition:0.3s;
+
+}
+
+.btn:hover{
+
+background:#0b4229;
+
+}
