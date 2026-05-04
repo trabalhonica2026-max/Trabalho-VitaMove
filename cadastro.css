@@ -1,0 +1,66 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial;
+}
+
+body{
+background: url("./img.png/fundo-site.jpeg");
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+
+background:white;
+padding:40px;
+border-radius:10px;
+width:400px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+color:#0f5c3a;
+}
+
+.input-box{
+
+display:flex;
+flex-direction:column;
+margin-bottom:20px;
+
+}
+
+.input-box input,
+.input-box select{
+
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+
+}
+
+.btn{
+
+background:#0f5c3a;
+color:white;
+border:none;
+padding:12px;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+
+}
+
+.btn:hover{
+
+background:#0b4229;
+
+}
