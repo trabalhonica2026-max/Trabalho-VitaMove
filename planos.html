@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="planos.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<title>Planos VitaMove</title>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Planos VitaMove</h1>
+
+<a href="index.html" class="btn-voltar">Voltar para Home</a>
+
+</header>
+
+
+<section class="container">
+
+<!-- PLANO FAMÍLIA -->
+
+<div class="plano">
+
+<h2>Plano Família</h2>
+
+<img src="https://cdn-icons-png.flaticon.com/512/2966/2966485.png">
+
+<p class="preco">R$ 1500.00 / mês</p>
+
+<ul>
+
+<li>✔ Atendimento Personalizado</li>
+<li>✔ Até 5 Membros da família</li>
+<li>✔ Sessões Ilimitadas</li>
+<li>✔ Avaliação Física Completa</li>
+
+</ul>
+
+<button onclick="escolherPlano('Plano Família')" class="btn">
+Escolher Plano
+</button>
+
+</div>
+
+
+<!-- PLANO PARTICULAR -->
+
+<div class="plano">
+
+<h2>Plano Individual</h2>
+
+<img src="https://cdn-icons-png.flaticon.com/512/2966/2966485.png">
+
+<p class="preco">R$ 500.00 / mês</p>
+
+<ul>
+
+<li>✔ Atendimento Personalizado</li>
+<li>✔ 8 sessões por mês</li>
+<li>✔ Avaliação Física Completa</li>
+<li>✔ Acompanhamento profissional</li>
+
+</ul>
+
+<button onclick="escolherPlano('Plano Particular')" class="btn">
+Escolher Plano
+</button>
+
+</div>
+
+</section>
+
+
+<script>
+
+function escolherPlano(plano){
+
+localStorage.setItem("planoEscolhido", plano)
+
+window.location.href = "sucesso.html"
+
+}
+
+</script>
+
+</body>
+
+</html>
