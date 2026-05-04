@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<title>Agendamentos - VitaMove</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial;
+}
+
+body{
+background: url("./img.png/fundo-site.jpeg");
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:40px;
+border-radius:10px;
+width:800px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+h1{
+text-align:center;
+margin-bottom:10px;
+color:#0f5c3a;
+}
+
+.boas-vindas{
+text-align:center;
+margin-bottom:25px;
+font-size:16px;
+color:#333;
+}
+
+.calendar-box{
+border:1px solid #ccc;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.calendar{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:8px;
+margin-top:15px;
+}
+
+.dia{
+padding:15px;
+border-radius:8px;
+background:#f3f3f3;
+font-size:16px;
+cursor:pointer;
+}
+
+.consulta{
+background:#0f5c3a;
+color:white;
+font-weight:bold;
+}
+
+.btn-voltar{
+background:#ccc;
+color:black;
+border:none;
+padding:10px;
+border-radius:5px;
+cursor:pointer;
+margin-bottom:20px;
+width:100%;
+}
+
+.btn-voltar:hover{
+background:#b5b5b5;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Agendamentos</h1>
+
+<p class="boas-vindas" id="boasVindas"></p>
+
+<button class="btn-voltar" onclick="voltar()">Voltar para Início</button>
+
+<div class="calendar-box">
+<h3>Escolha os dias do mês</h3>
+<div class="calendar" id="calendario"></div>
+</div>
+
+</div>
+
+<script>
+
+    // Mensagem personalizada
+    let nome = localStorage.getItem("nome")
+    
+    document.getElementById("boasVindas").innerText =
+    `Seja bem-vindo de volta, ${nome}! 💚 
+    Agende sua consulta conosco e cuide do seu bem-estar.`
+    
+    
+    // Controle de consultas
+    let consultasMarcadas = 0
+    let diasSelecionados = []
+    
+    function gerarCalendario(){
+    
+    let calendario = document.getElementById("calendario")
+    
+    for(let i=1;i<=30;i++){
+    
+    let dia = document.createElement("div")
+    dia.classList.add("dia")
+    dia.innerText = i
+    
+    dia.addEventListener("click", function(){
+    
+    if(consultasMarcadas >= 2 && !dia.classList.contains("consulta")){
+    alert("Você só pode marcar 2 consultas por mês")
+    return
+    }
+    
+    if(dia.classList.contains("consulta")){
+    dia.classList.remove("consulta")
+    consultasMarcadas--
+    
+    diasSelecionados = diasSelecionados.filter(d => d !== i)
+    
+    }else{
+    dia.classList.add("consulta")
+    consultasMarcadas++
+    
+    diasSelecionados.push(i)
+    }
+    
+    // 👉 Quando atingir 2 consultas
+    if(consultasMarcadas === 2){
+    
+    let horario = prompt("Escolha um horário para as consultas (ex: 14:00)")
+    
+    if(horario){
+    
+    alert(`✅ Sua consulta está marcada!
+    
+    📅 Dia ${diasSelecionados[0]} às ${horario}
+    📅 Dia ${diasSelecionados[1]} às ${horario}
+    
+    Obrigado por escolher a VitaMove 💚`)
+    
+    }
+    
+    }
+    
+    })
+    
+    calendario.appendChild(dia)
+    
+    }
+    
+    }
+    
+    gerarCalendario()
+    
+    function voltar(){
+    window.location.href="index.html"
+    }
+    
+    </script>
+
+</body>
+</html>
