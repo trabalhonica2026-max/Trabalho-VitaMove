@@ -1,0 +1,220 @@
+:root{
+--main-color:#075b34;
+--green:#35a342;
+--bg:#f5f7f6;
+--border:0.1rem solid rgba(0,0,0,0.1);
+font-size:10px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Roboto",sans-serif;
+text-decoration:none;
+transition:0.3s;
+}
+
+body{
+background:var(--bg);
+}
+
+/* HEADER */
+
+.header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+background:white;
+z-index:1000;
+border-bottom:var(--border);
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header section{
+display:flex;
+align-items:center;
+justify-content:space-between;
+max-width:1200px;
+margin:auto;
+padding:15px;
+}
+
+.logo{
+width:120px;
+}
+
+.vitamove a{
+margin:0 15px;
+font-size:18px;
+color:#333;
+font-weight:500;
+}
+
+.vitamove a:hover{
+color:var(--main-color);
+}
+
+/* HOME */
+
+.home-container{
+background:url("./img.png/fundo-site.jpeg");
+background-size:cover;
+background-position:center;
+height:100vh;
+display:flex;
+align-items:center;
+}
+
+.content{
+max-width:600px;
+margin-left:100px;
+}
+
+.content h3{
+font-size:50px;
+color:#000;
+}
+
+.content p{
+font-size:18px;
+margin:15px 0;
+}
+
+/* BOTÃO */
+
+.btn{
+background:var(--main-color);
+color:white;
+padding:12px 30px;
+border-radius:6px;
+font-size:16px;
+display:inline-block;
+}
+
+.btn:hover{
+background:#0f5c3a;
+transform:scale(1.05);
+}
+
+/* BOTÃO 2 */
+
+.btn2{
+background:var(--main-color);
+color:white;
+padding:12px 30px;
+border-radius:6px;
+font-size:16px;
+display:inline-block;
+}
+
+.btn2:hover{
+background:#0f5c3a;
+transform:scale(1.05);
+}
+
+/* TITULOS */
+
+.titulo{
+text-align:center;
+font-size:36px;
+color:#0f5c3a;
+margin:80px 0 40px;
+}
+
+/* SOBRE */
+
+.about .row{
+display:flex;
+align-items:center;
+gap:40px;
+max-width:1100px;
+margin:auto;
+}
+
+.about img{
+width:400px;
+border-radius:10px;
+}
+
+/* ESPECIALIDADES */
+
+.especialidades-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+padding:20px;
+}
+
+.especialidade{
+background:white;
+width:250px;
+padding:25px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.especialidade:hover{
+transform:translateY(-10px);
+}
+
+.especialidade img{
+width:60px;
+margin-bottom:15px;
+}
+
+.especialidade h3{
+color:#0f5c3a;
+margin-bottom:10px;
+}
+
+/* EQUIPE */
+
+.equipe-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+padding:20px;
+}
+
+.medico{
+background:white;
+width:260px;
+padding:25px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.medico:hover{
+transform:scale(1.05);
+}
+
+.medico img{
+width:120px;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+.medico h3{
+color:#0f5c3a;
+}
+
+/* CONTATO */
+
+.contato{
+margin-top:80px;
+background:#0f5c3a;
+color:white;
+padding:60px;
+text-align:center;
+}
+
+.contato-box p{
+font-size:20px;
+margin:10px 0;
+}
